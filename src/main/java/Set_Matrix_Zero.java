@@ -8,7 +8,6 @@ public class Set_Matrix_Zero {
             }
         }
     }
-
     static void markCol(int[][] matrix, int n, int m, int j) {
         // set all non-zero elements as -1 in the col j:
         for (int i = 0; i < n; i++) {
