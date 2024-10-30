@@ -7,14 +7,10 @@ public class LeetCode {
         int length = nums.length;
         int[] result = new int[length + length];
 
-        for (int i = 0; i < length; i++) {
-            result[i] = nums[i];
-        }
+        System.arraycopy(nums, 0, result, 0, nums.length);
 
         // Copy elements from array2
-        for (int i = 0; i < length; i++) {
-            result[length + i] = nums[i];
-        }
+        System.arraycopy(nums, 0, result, length + 0, length);
         return result;
 
     }
@@ -117,7 +113,7 @@ public class LeetCode {
 
     public static int[][] rotateMatrix(int[][] matrix){
     int n = matrix.length;
-    int rotated[][] = new int[n][n];
+        int[][] rotated = new int[n][n];
         for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             rotated[j][n - i - 1] = matrix[i][j];

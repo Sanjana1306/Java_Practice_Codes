@@ -4,7 +4,7 @@ public class Matrix {
 
     //Sort a Matrix
 
-    static int[][] sortRowWise2D(int m[][]) {
+    static int[][] sortRowWise2D(int[][] m) {
         // One by one sort individual rows.
         for (int i = 0; i < m.length; i++)
             Arrays.sort(m[i]);
@@ -18,14 +18,13 @@ public class Matrix {
         int n= m.length;
         int[][] matrix = new int[n][n];
         for(int i=0;i<m.length;i++) {
-            for (int j = 0; j < m.length; j++) {
-                matrix[i][j] = m[i][j];
-            }
+            System.arraycopy(m, 0, matrix, 0, m.length);
+
         }
 
         return matrix;
     }
-    static int sortRowWise(int m[][])
+    static int sortRowWise(int[][] m)
     {
         // loop for rows of matrix
         for (int i = 0; i < m.length; i++) {
@@ -68,7 +67,7 @@ public class Matrix {
         // Initializing a 2-D array with values
        // int arr[][] = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
-        int m[][] = { { 9, 8, 7, 1 },
+        int[][] m = { { 9, 8, 7, 1 },
                 { 7, 3, 0, 2 },
                 { 9, 5, 3, 2 },
                 { 6, 3, 1, 2 } };
