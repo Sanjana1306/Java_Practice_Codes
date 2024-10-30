@@ -1,8 +1,6 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Set_Matrix_Zero {
     static void markRow(int[][] matrix, int n, int m, int i) {
+
         // set all non-zero elements as -1 in the row i:
         for (int j = 0; j < m; j++) {
             if (matrix[i][j] != 0) {
